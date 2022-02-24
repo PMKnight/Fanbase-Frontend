@@ -9,8 +9,8 @@ function App() {
 		<>
 			<main>
 				<Routes>
-					<Route path='/fanbase' element={<FanBase />} />
-					<Route path='/' element={<FanMemories />} />
+					<Route path='/' element={<FanBase />} />
+					<Route path='/fanbase' element={<FanMemories />} />
 					<Route path='/add-memory' element={<NewMemory />} />
 					<Route path='/fanbase/:id' element={<FanDetails />} />
 				</Routes>

@@ -6,7 +6,7 @@ import './FanBase.css';
 function FanBase(props) {
 	return (
 		<div className='box'>
-			<Link className='container' to='/'>
+			<Link className='container' to='/fanbase'>
 				<h1 id='fan' className='animate__animated animate__bounceInUp'>
 					Fan
 				</h1>

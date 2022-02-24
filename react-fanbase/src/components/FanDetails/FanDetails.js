@@ -32,7 +32,7 @@ function FanDetails(props) {
 	return (
 		<Container sx={{ maxWidth: 400 }}>
 			<Navigation />
-			<CardContent>
+			<CardContent className='card'>
 				<Link to='/fanbase/:id'></Link>
 				<Link to={`/fanbase/${memory.id}`} key={memory.id}>
 					<Typography variant='h5' color='black' component='div'>
@@ -45,7 +45,7 @@ function FanDetails(props) {
 						image={memory.photo_url}
 						alt={memory.title}
 					/>
-					<Typography variant='body2' color='black'>
+					<Typography variant='body1' color='black'>
 						{memory.body}
 					</Typography>
 				</Link>

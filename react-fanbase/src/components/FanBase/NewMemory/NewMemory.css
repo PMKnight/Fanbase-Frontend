@@ -1,0 +1,48 @@
+.memoryContainer {
+	display: grid;
+	grid-template-columns: 100px, 100px, 100px;
+	grid-template-rows: auto;
+	justify-content: center;
+	text-align: center;
+}
+
+form {
+	width: 100%;
+	border: 2px solid #c7cccf;
+	text-align: center;
+	justify-self: center;
+	margin-top: 30%;
+}
+
+label {
+	display: block;
+	align-items: center;
+	font-weight: bolder;
+	padding: 1rem;
+}
+
+input {
+	border: 1px solid var(--gray);
+	border-radius: 2rem;
+	display: block;
+	margin-bottom: 1rem;
+	padding: 0.5rem 0.5rem;
+	width: 100%;
+}
+
+#text {
+	width: 100%;
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+button {
+	background-color: rgb(184, 216, 40);
+	color: black;
+	width: 50%;
+	border-radius: 2rem;
+}
+#file-upload-button {
+	background-color: green;
+	color: black;
+}

@@ -1,0 +1,22 @@
+Link {
+	color: black;
+	border: 2px solid black;
+	border-radius: 10px;
+
+	margin: 5%;
+}
+Typography {
+	color: black;
+	border: 2px solid black;
+	border-radius: 10px;
+
+	margin: 5%;
+}
+.img {
+	display: flex;
+	align-items: right;
+	object-fit: cover;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}

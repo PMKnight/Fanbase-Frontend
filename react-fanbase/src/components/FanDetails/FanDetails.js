@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import Navigation from '../Navigation/Navigation';
 import { Container, CardMedia, CardContent, Typography } from '@mui/material';
+import './FanDetails.css';
 
 function FanDetails(props) {
 	const { id } = useParams();
@@ -29,22 +31,21 @@ function FanDetails(props) {
 
 	return (
 		<Container sx={{ maxWidth: 400 }}>
+			<Navigation />
 			<CardContent>
-				<Typography gutterBottom variant='h2' component='div'>
-					FanBase
-				</Typography>
-				<Link to='/:id'></Link>
-				<Link to={`/${memory.id}`} key={memory.id}>
-					<Typography variant='h5' color='blue' component='div'>
+				<Link to='/fanbase/:id'></Link>
+				<Link to={`/fanbase/${memory.id}`} key={memory.id}>
+					<Typography variant='h5' color='black' component='div'>
 						{memory.title}
 					</Typography>
 					<CardMedia
+						className='img'
 						component='img'
-						height='300'
+						// height='300'
 						image={memory.photo_url}
 						alt={memory.title}
 					/>
-					<Typography variant='body2' color='blue'>
+					<Typography variant='body2' color='black'>
 						{memory.body}
 					</Typography>
 				</Link>

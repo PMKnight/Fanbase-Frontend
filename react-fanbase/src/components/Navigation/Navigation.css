@@ -1,0 +1,14 @@
+.fan {
+	color: black;
+}
+
+Button {
+	color: black;
+}
+
+#basic-button {
+	color: black;
+	display: block;
+	justify-content: right;
+	font-size: 60px;
+}

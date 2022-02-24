@@ -4,7 +4,9 @@ import Container from '@mui/material/Container';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-
+import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
+import './FanMemories.css';
+import Navigation from '../Navigation/Navigation';
 function FanMemories(props) {
 	// const navigate = useNavigate();
 	const [memories, setMemories] = useState();
@@ -39,15 +41,17 @@ function FanMemories(props) {
 
 	return (
 		<div className='container'>
-			<h1>FanBase</h1>(
-			<Link to='/'>
-				<button>Add Memory</button>
+			<Navigation className='nav' />
+			<Link to='/add-memory'>
+				<EmojiEventsRoundedIcon sx={{ color: 'gold', fontSize: 60 }}>
+					Add Memory
+				</EmojiEventsRoundedIcon>
 			</Link>
-			)
+
 			<Container sx={{ width: 500, height: 450 }}>
 				<ImageList variant='masonry' cols={2} gap={8}>
 					{memories.map((memory) => (
-						<Link to={`/${memory.id}`} key={memory.id}>
+						<Link to={`/fanbase/${memory.id}`} key={memory.id}>
 							<ImageListItem key={memory.photo_url}>
 								<img
 									src={`${memory.photo_url}?w=248&fit=crop&auto=format`}
@@ -55,7 +59,11 @@ function FanMemories(props) {
 									alt={memory.title}
 									loading='lazy'
 								/>
-								<ImageListItemBar position='below' title={memory.name} />
+								<ImageListItemBar
+									className='title'
+									position='below'
+									title={memory.name}
+								/>
 							</ImageListItem>
 						</Link>
 					))}

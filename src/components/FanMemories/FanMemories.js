@@ -8,24 +8,16 @@ import EmojiEventsRoundedIcon from '@mui/icons-material/EmojiEventsRounded';
 import './FanMemories.css';
 import Navigation from '../Navigation/Navigation';
 function FanMemories(props) {
-	// const navigate = useNavigate();
 	const [memories, setMemories] = useState();
 
-	// const [comment, setCommment] = useState()
-
-	// comment = {[
-	//   commentValue = '',
-	//   commentLine: [{ commentId:””, text: “”, }],]
-	//   }
-
-	const url = 'http://localhost:8000/api/memories/';
+	const url = 'https://safe-beach-21515.herokuapp.com/api/memories/';
 
 	const getMemory = async () => {
 		try {
 			const response = await fetch(url);
 			if (response.status === 200) {
 				const data = await response.json();
-				console.log(data);
+
 				setMemories(data);
 			}
 		} catch (error) {}

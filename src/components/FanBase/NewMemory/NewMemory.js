@@ -17,7 +17,9 @@ function NewMemory(props) {
 
 	async function getUserMemories() {
 		try {
-			const res = await fetch('http://localhost:8000/api/memories/');
+			const res = await fetch(
+				'https://safe-beach-21515.herokuapp.com/api/memories/'
+			);
 			const data = await res.json();
 			console.log(data);
 			setUserMemories(data);
@@ -46,11 +48,13 @@ function NewMemory(props) {
 	const handleSubmit = (event) => {
 		event.preventDefault();
 		// Write your PUT fetch() or axios() request here
-		axios.post('http://localhost:8000/api/memories/').then((res) => {
-			console.log(res);
-			// rediredct the user to 'localhost:3000/'
-			navigate('/');
-		});
+		axios
+			.post('https://safe-beach-21515.herokuapp.com/api/memories/')
+			.then((res) => {
+				console.log(res);
+				// rediredct the user to 'localhost:3000/'
+				navigate('/');
+			});
 	};
 
 	// const handleDelete = () => {

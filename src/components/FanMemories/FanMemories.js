@@ -10,7 +10,7 @@ import Navigation from '../Navigation/Navigation';
 function FanMemories(props) {
 	const [memories, setMemories] = useState();
 
-	const url = 'http://localhost:8000/api/memories/';
+	const url = 'https://safe-beach-21515.herokuapp.com/api/memories/';
 
 	const getMemory = async () => {
 		try {

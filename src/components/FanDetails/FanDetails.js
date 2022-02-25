@@ -12,7 +12,7 @@ function FanDetails(props) {
 		getDetails();
 	}, []);
 
-	const url = 'http://localhost:8000/api/memories/';
+	const url = 'https://safe-beach-21515.herokuapp.com/api/memories/';
 
 	const getDetails = async () => {
 		try {
